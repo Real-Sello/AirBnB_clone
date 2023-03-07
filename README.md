@@ -1,5 +1,5 @@
 ![img](https://i.imgur.com/sftSnOT.png)
-# 0x00. AirBnB clone - The console
+# <img src="https://iconape.com/wp-content/png_logo_vector/airbnb-2.png" width=20> 0x00. AirBnB clone - The console
 `Group project` `Python` `OOP`
 
 ## Authors
