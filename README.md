@@ -14,7 +14,7 @@ A command interpreter without a visual interface built in `Python programming la
 - The console should be able to be started in both interactive mode using `./console.py` and non-interactive mode using `echo "command" | ./console.py`(where 'command' is command passed by user)
   ### *Example:*
     - *Running in Interactive Mode*:
-    ``` 
+    ```bash 
     $ ./console.py
     (hbnb) help
 
@@ -28,7 +28,7 @@ A command interpreter without a visual interface built in `Python programming la
     $
     ```
     - *Running in Non-Interactive Mode*:
-    ```
+    ```bash
     $ echo "help" | ./console.py
     (hbnb)
 
