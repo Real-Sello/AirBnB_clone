@@ -9,11 +9,11 @@
 ---
 ## The Console
 ![img](images/815046647d23428a14ca.png)
-A command interpreter without a visual interface built in `Python programming language` that allows developers to interact and manipulate the website's database directly.
+A command line interpreter without a visual interface built in `Python programming language` that allows developers to interact and manipulate the website's database directly.
 ### Starting The Console
 - The console should be able to be started in both interactive mode using `./console.py` and non-interactive mode using `echo "command" | ./console.py`(where 'command' is command passed by user)
   ### *Example:*
-    - *Running in Interactive Mode*:
+    - *Executing in Interactive Mode*:
     ```bash 
     $ ./console.py
     (hbnb) help
@@ -27,7 +27,7 @@ A command interpreter without a visual interface built in `Python programming la
     (hbnb) quit
     $
     ```
-    - *Running in Non-Interactive Mode*:
+    - *Executing in Non-Interactive Mode*:
     ```bash
     $ echo "help" | ./console.py
     (hbnb)
