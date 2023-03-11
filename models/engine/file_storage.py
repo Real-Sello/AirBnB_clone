@@ -30,8 +30,12 @@ class FileStorage:
                 obj_dict = json.load(file)
                 for key, obj_data in obj_dict.items():
                     class_name, obj_id = key.split('.')
-                    module = __import__('models.' + class_name.lower(),
-                                        fromlist=[class_name])
-                    class_ = getattr(module, class_name)
-                    obj = class_(**obj_data)
+                    if class_name == 'User':
+                        from models.user import User
+                        obj = User(**obj_data)
+                    else:
+                        module = __import__('models.' + class_name.lower(),
+                                            fromlist=[class_name])
+                        class_ = getattr(module, class_name)
+                        obj = class_(**obj_data)
                     self.__objects[key] = obj
