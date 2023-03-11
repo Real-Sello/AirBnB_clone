@@ -1,5 +1,12 @@
-import json
 import os.path
+import json
+from models.base_model import BaseModel
+from models.user import User
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 
 
 class FileStorage:
@@ -31,8 +38,17 @@ class FileStorage:
                 for key, obj_data in obj_dict.items():
                     class_name, obj_id = key.split('.')
                     if class_name == 'User':
-                        from models.user import User
                         obj = User(**obj_data)
+                    elif class_name == 'Place':
+                        obj = Place(**obj_data)
+                    elif class_name == 'State':
+                        obj = State(**obj_data)
+                    elif class_name == 'City':
+                        obj = City(**obj_data)
+                    elif class_name == 'Amenity':
+                        obj = Amenity(**obj_data)
+                    elif class_name == 'Review':
+                        obj = Review(**obj_data)
                     else:
                         module = __import__('models.' + class_name.lower(),
                                             fromlist=[class_name])
