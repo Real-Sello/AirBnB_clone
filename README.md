@@ -51,9 +51,9 @@ A command line interpreter without a visual interface built in `Python programmi
     ```
 - All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
 ## Authors
-- [@Real-Sello](https://github.com/Real-Sello) & [@Lehlohonol](https://github.com/Lehlohonol) | ALX | Cohort 10
+- [@Real-Sello](https://github.com/Real-Sello) | ALX | Cohort 10
 ___
 
 ## Copyright
 
-Sello Prince Moneatse &copy; 2023 | Hloni Pretorius &copy; 2023 | All Rights Reserved
+Sello Prince Moneatse &copy; 2023 | All Rights Reserved
