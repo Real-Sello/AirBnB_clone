@@ -47,14 +47,14 @@ class Test_Console(unittest.TestCase):
             self.assertEqual(out, f.getvalue().strip())
 
     def test_help_EOF(self):
-        out = "Exits on EOF"
+        out = "EOF command to exit the program"
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help EOF"))
             self.assertEqual(out, f.getvalue().strip())
 
     def test_help_quit(self):
         """tests the help quit"""
-        out = "exits when typing quit"
+        out = "Quit command to exit the program"
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help quit"))
             self.assertEqual(out, f.getvalue().strip())
@@ -69,8 +69,8 @@ class Test_Console(unittest.TestCase):
     def test_help_create(self):
         """Test the create help"""
         out = """Creates a new instance of BaseModel,
-        saves it (to the JSON file) and prints the id.
-        Ex: $ create BaseModel"""
+        saves it (to the JSON file) and prints the id."""
+
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help create"))
             self.assertEqual(out, f.getvalue().strip())
@@ -85,7 +85,9 @@ class Test_Console(unittest.TestCase):
 
     def test_help_destroy(self):
         """tests help destroy"""
-        out = "method to delete an instance based on the class name and id"
+        out = """Deletes an instance
+        based on the class name and id
+        and saves the change into the JSON file"""
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help destroy"))
             self.assertEqual(out, f.getvalue().strip())
