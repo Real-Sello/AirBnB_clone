@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+converts dictionary representation to a JSON string
+"""
+
 import os.path
 import json
 from models.base_model import BaseModel
