@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""test the Console itself"""
+"""tests the Console"""
 import unittest
 from console import HBNBCommand
 from models import storage
@@ -29,7 +29,7 @@ class Test_pep8(unittest.TestCase):
 
 
 class Test_Console(unittest.TestCase):
-    """Tests the entire console"""
+    """Tests entire console"""
 
     def test_prompt(self):
         """tests the prompt"""

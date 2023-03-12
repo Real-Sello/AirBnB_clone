@@ -4,7 +4,7 @@ from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """Creates class Review module"""
+    """Class Review module"""
 
     place_id = ""
     user_id = ""

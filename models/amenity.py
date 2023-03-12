@@ -4,5 +4,5 @@ from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """creates class Amenity module"""
+    """Class Amenity module"""
     name = ""

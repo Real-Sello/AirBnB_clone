@@ -1,28 +1,28 @@
 #!/usr/bin/python3
 """
-converts dictionary representation to a JSON string
+convert the dictionary representation to a JSON string
 """
-
 import json
-from models.base_model import BaseModel
-from models.user import User
-from models.place import Place
-from models.state import State
-from models.city import City
 from models.amenity import Amenity
+from models.base_model import BaseModel
+from models.city import City
+from models.place import Place
 from models.review import Review
+from models.state import State
+from models.user import User
 
 
 class FileStorage:
     """
-    serialize instances to a JSON file and vica-verca
+    serializes instances to a JSON file and deserializes
+    JSON file to instances
     """
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """Return the dictionary __objects"""
-        return self.__object
+        """Returns the dictionary __objects"""
+        return self.__objects
 
     def new(self, obj):
         """Set in __objects the obj with key <obj class name>.id"""
@@ -52,4 +52,3 @@ class FileStorage:
                     self.new(new)
         except FileNotFoundError:
             pass
-

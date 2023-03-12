@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-Base Model Class for AirBnB
+Base Model for AirBnB
 """
-
 from datetime import datetime
 import json
 from uuid import uuid4
@@ -10,10 +9,11 @@ import models
 
 
 class BaseModel:
-    """Base Model class"""
+    """Base Model Class"""
 
     def __init__(self, *args, **kwargs):
-        """Initialize BaseModel attributes"""
+        """Initialization of Class Attributes"""
+
         if kwargs:
             for keys, values in kwargs.items():
                 if keys != "__class__":
@@ -25,7 +25,7 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.today()
             self.updated_at = datetime.today()
-            models.storage.new(self)  # add this line
+            models.storage.new(self)
 
     def __str__(self):
         """Return string representation of BaseModel"""
@@ -35,7 +35,7 @@ class BaseModel:
     def save(self):
         """Update updated_at with current datetime"""
         self.updated_at = datetime.today()
-        models.storage.save()  # modify this line
+        models.storage.save()
 
     def to_dict(self):
         """Return dictionary representation of BaseModel"""
@@ -44,4 +44,3 @@ class BaseModel:
         new["updated_at"] = self.updated_at.isoformat()
         new["__class__"] = self.__class__.__name__
         return new
-

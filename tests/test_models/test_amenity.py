@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""test Amenity method"""
+"""test the Amenity method"""
 import unittest
 from models.base_model import BaseModel
 from models.amenity import Amenity
@@ -36,7 +36,7 @@ class TestDocs(unittest.TestCase):
 
 class TestAmenity(unittest.TestCase):
     """Test the Amenity module"""
-
+    
     def test_class(self):
         """Test the amenity class"""
         self.assertEqual(Amenity.name, "")

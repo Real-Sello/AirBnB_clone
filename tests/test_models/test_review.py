@@ -35,11 +35,11 @@ class TestDocs(unittest.TestCase):
 
 
 class TestReview(unittest.TestCase):
-    """Test Review Class"""
+        """Test Review Class"""
 
-    def test_review(self):
-        """test the reviewclass"""
-        self.assertEqual(Review.place_id, "")
-        self.assertEqual(Review.user_id, "")
-        self.assertEqual(Review.text, "")
-        self.assertTrue(issubclass(Review, Review))
+        def test_review(self):
+            """test the reviewclass"""
+            self.assertEqual(Review.place_id, "")
+            self.assertEqual(Review.user_id, "")
+            self.assertEqual(Review.text, "")
+            self.assertTrue(issubclass(Review, Review))

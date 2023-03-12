@@ -17,19 +17,20 @@ from models import storage
 
 class HBNBCommand(cmd.Cmd):
     """Command interpreter class"""
+
     prompt = "(hbnb) "
     classes = ["BaseModel", "User", "State", "City",
                "Amenity", "Place", "Review"]
     attributes = ["updated_at", "created_at", "id"]
     specs = ["\'", "\""]
 
-    def do_EOF(self, arg):
+    def do_EOF(self, line):
         """EOF command to exit the program
         """
         print()
         return True
 
-    def do_quit(self, arg):
+    def do_quit(self, line):
         """Quit command to exit the program
         """
         return True
@@ -38,9 +39,10 @@ class HBNBCommand(cmd.Cmd):
         """Do nothing when an empty line is entered"""
         pass
 
-    def do_create(self, arg):
-        """Creates a new instance of BaseModel
-        saves it (to the JSON file) and prints the id
+    def do_create(self, line):
+        """
+        Creates a new instance of BaseModel,
+        saves it (to the JSON file) and prints the id.
         """
         if not line:
             print("** class name missing **")
@@ -50,16 +52,8 @@ class HBNBCommand(cmd.Cmd):
             new_item = eval(line)()
             print(new_item.id)
             new_item.save()
-            """
-            # create new instance of BaseModel
-            model_value = BaseModel()
-            # save it to json file
-            model_value.save()
-            # print the id
-            print(model_value.id)
-            """
 
-    def do_show(self, arg):
+    def do_show(self, line):
         """Prints the string representation of an instance
         based on the class name and id
         """
@@ -81,7 +75,7 @@ class HBNBCommand(cmd.Cmd):
             print("[{}] ({}) {}".format(comm[0],
                                         comm[1], storage.all()[new_item]))
 
-    def do_destroy(self, arg):
+    def do_destroy(self, line):
         """Deletes an instance
         based on the class name and id
         and saves the change into the JSON file
@@ -104,7 +98,7 @@ class HBNBCommand(cmd.Cmd):
                 storage.all().pop(new_item)
                 storage.save()
 
-    def do_all(self, arg):
+    def do_all(self, line):
         """Prints all string representation of all instances
         based or not on the class name
         """
@@ -123,10 +117,11 @@ class HBNBCommand(cmd.Cmd):
                 list_object.append(str(key) + " " + str(value))
         print(list_object)
 
-    def do_update(self, arg):
+    def do_update(self, line):
         """Updates an instance based on the class name and id
         by adding or updating attribute (save the change into the JSON file)
         """
+
         comm = line.split()
         if not line:
             print("** class name missing **")
@@ -155,9 +150,9 @@ class HBNBCommand(cmd.Cmd):
                     else:
                         setattr(object[key], comm[2], str(comm[3]))
                     storage.save()
-            else:
-                print("** no instance found **")
-                return
+                else:
+                    print("** no instance found **")
+                    return
 
     def do_count(self, line):
         """
@@ -174,5 +169,5 @@ class HBNBCommand(cmd.Cmd):
             print(count)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     HBNBCommand().cmdloop()

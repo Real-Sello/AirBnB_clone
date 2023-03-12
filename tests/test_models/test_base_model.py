@@ -88,6 +88,5 @@ class TestBaseModel(unittest.TestCase):
         dict_2 = bmodel_5.to_dict()
         self.assertNotEqual(dictionary_5["updated_at"], dict_2["updated_at"])
 
-
 if __name__ == "__main__":
     unittest.main()
