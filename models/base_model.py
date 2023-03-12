@@ -2,11 +2,10 @@
 """
 Base Model Class for AirBnB
 """
-from datetime import datetime
+
 import json
-from uuid import uuid4
 import models
-import uuid
+from uuid import uuid4
 from datetime import datetime
 
 
