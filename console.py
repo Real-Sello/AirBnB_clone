@@ -3,9 +3,9 @@
 This module contains the entry point of the command interpreter.
 """
 
+import cmd
 from models.base_model import BaseModel
 from models import storage
-import cmd
 from models.user import User
 from models import base_model
 
