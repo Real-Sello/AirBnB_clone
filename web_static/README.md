@@ -1,4 +1,4 @@
-# <img src="/assets/mini.png"> 0x01. AirBnB clone - Web static
+# <img src="/assets/mini.png" width=30> 0x01. AirBnB clone - Web static
 `HTML` `CSS` `Front-end`
 
 ## Background Context
