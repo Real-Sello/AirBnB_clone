@@ -8,13 +8,13 @@
 - The AirBnB website allows users to host anything, anywhere, so guests can enjoy everything, everywhere..
 ---
 ## The Console
-![img](images/815046647d23428a14ca.png)
+![img](assets/hbnb_step1.png)
 A command line interpreter without a visual interface built in `Python programming language` that allows developers to interact and manipulate the website's database directly.
 ### Starting The Console
 - The console should be able to be started in both interactive mode using `./console.py` and non-interactive mode using `echo "command" | ./console.py`(where 'command' is command passed by user)
   ### *Example:*
     - *Executing in Interactive Mode*:
-    ```bash 
+    ```bash
     $ ./console.py
     (hbnb) help
 
@@ -22,8 +22,8 @@ A command line interpreter without a visual interface built in `Python programmi
     ========================================
     EOF  help  quit
 
-    (hbnb) 
-    (hbnb) 
+    (hbnb)
+    (hbnb)
     (hbnb) quit
     $
     ```
@@ -35,7 +35,7 @@ A command line interpreter without a visual interface built in `Python programmi
     Documented commands (type help <topic>):
     ========================================
     EOF  help  quit
-    (hbnb) 
+    (hbnb)
     $
     $ cat test_help
     help
@@ -46,7 +46,7 @@ A command line interpreter without a visual interface built in `Python programmi
     Documented commands (type help <topic>):
     ========================================
     EOF  help  quit
-    (hbnb) 
+    (hbnb)
     $
     ```
 - All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
